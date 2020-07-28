@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    :root {
+        --background-color: #c1d4f7;
+        --hamburger-size:  30px;
+        --hamburger-bg: #571212;
+        --nav-links-hover-bg: #ffffff;
+        --nav-links-hover-color: #4b2424;
+        --portfolio-view-preview-bg: #3c701e;
+        --portfolio-view-preview-color: #d3e0df;
+        --portfolio-view-code-bg: #bd0606;
+        --portfolio-view-code-color: #d3e0df;
+        --form-input-border: #4d0303;
+    }
+    body {
+        background-color: var(--background-color);
+        display: grid;
+        grid-template-areas: 'nav' 'main' 'footer';
+    }
+    nav {
+        grid-area: nav;
+        justify-self: right;
+        display: grid;
+        grid-template-areas: 'hamburger' 'links';
+        width: var(--hamburger-size);
+    }
+
+    nav:hover {
+        width: 100%;
+    }
+
+    nav:hover #links {
+        height: calc(100vh - var(--hamburger-size));
+        display: grid;
+        background-color: var(--nav-links-hover-bg);
+        color: var(--nav-links-hover-color);
+    }
+
+    #hamburger {
+        grid-area: hamburger;
+        justify-self: right;
+        display: grid;
+        align-content: space-around;
+        justify-items: center;
+        width: var(--hamburger-size);
+        height: var(--hamburger-size);
+    }
+    #hamburger div {
+        height: 5px;
+        width: 90%;
+        background-color: var(--hamburger-bg);
+        border: none;
+        border-radius: 25px;
+    }
+    nav #links {
+        grid-area: links;
+        height: 0px;
+        display: none;
+        grid-template-rows: repeat(3, auto);
+        justify-content: center;
+        justify-items: center;
+    }
+    nav #links:hover {
+        background-color: var(--nav-links-hover-bg);
+        color: var(--nav-links-hover-color);
+    }
+    nav #links a {
+        display: grid;
+        text-align: center;
+        align-items: center;
+        width: 100vw;
+    }
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-areas: 'about' 'portfolio' 'contact';
+    }
+    #bio {
+        grid-area: about;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-template-areas: 'aboutTitle' 'aboutImg' 'aboutDesc';
+        justify-content: center;
+        justify-items: center;
+    }
+    #bio h1 {
+        grid-area: aboutTitle;
+    }
+    #bio img {
+        border-radius: 25px;
+        grid-area: aboutImg;
+    }
+    #bio p {
+        max-width: 450px;
+        grid-area: aboutDesc;
+    }
+    #portfolio {
+        grid-area: portfolio;
+        display: grid;
+        grid-row: 20px;
+        text-align: center;
+    }
+    .portfolio-item {
+        display: grid;
+        grid-template-areas: 'title title' 'image image' 'description description' 'preview code';
+    }
+    .portfolio-item h2 {
+        grid-area: title;
+    }
+    .portfolio-item img {
+        grid-area: image;
+        width: 100%;
+    }
+    .portfolio-item p {
+        grid-area: description;
+    }
+    .portfolio-item a {
+        height: 50px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        justify-self: center;
+        border: none;
+        border-radius: 20px;
+        width: 250px;
+    }
+    .portfolio-item #preview-link {
+        grid-area: preview;
+        background-color: var(--portfolio-view-preview-bg);
+        color: var(--portfolio-view-preview-color);
+    }
+    .portfolio-item #code-link {
+        grid-area: code;
+        background-color: var(--portfolio-view-code-bg);
+        color: var(--portfolio-view-code-color);
+    }
+    #contact {
+        grid-area: contact;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-template-areas: 'title' 'name' 'phone' 'email' 'message';
+    }
+    #contact h1 {
+        grid-area: title;
+        text-align: center;
+    }
+    #contact fieldset {
+        border: none;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    #contact input {
+        border: 1px solid var(--form-input-border);
+        border-radius: 5px;
+    }
+    #contact input {
+        width: 100%;
+    }
+    #contact-name {
+        grid-area: name;
+    }
+    #contact-phone {
+        grid-area: phone;
+    }
+    #contact-email {
+        grid-area: email;
+    }
+    #contact-message {
+        grid-area: message;
+        border: 1px solid var(--form-input-border);
+        border-radius: 5px;
+    }
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+    h1 {
+        font-size: 6em;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+</style>
+<html>
+    <head>
+    </head>
+    <body>
+        <nav>
+            <div id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="links">
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        <main>
+            <section id="bio">
+                <h1>About Me</h1>
+                <img src="#" alt="Picture of Jeremiah Brandt" id="#bio-picture" />
+                <p id="bio-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem repellat, ut magnam dolore incidunt voluptatem ipsa eaque doloremque quae odit assumenda velit. Vitae aliquid tenetur debitis rerum, labore ipsum recusandae?</p>
+            </section>
+            <section id="portfolio">
+                <h1>Portfolio</h1>
+            </section>
+            <form action="" method="GET" id="contact">
+                <h1>Contact</h1>
+                <fieldset id="contact-name">
+                    <label for="name">Name:</label>
+                    <input name="tel" type="tel" />
+                </fieldset>
+                <fieldset id="contact-phone">
+                    <label for="phone">Phone Number:</label>
+                    <input name="text" type="text" required/>
+                </fieldset>
+                <fieldset id="contact-email">
+                    <label for="email">Email Address:</label>
+                    <input name="email" type="email" />
+                </fieldset>
+                <textarea id="contact-message" name="message" rows="5"></textarea>
+            </form>
+        </main>
+        <footer>
+            Copyright <span id="date"></span><a href="http://jeremiahbrandt.com"> Jeremiah Brandt</a>
+        </footer>
+    </body>
+    <script>
+        const getGithubData = async (githubUsername) => {
+            const data = await(await fetch(`https://api.github.com/users/${githubUsername}`)).json();
+            return data;
+        }
+
+        const getPortfolio = async (githubUsername) => {
+            const repos = await(await fetch(`https://api.github.com/users/${githubUsername}/repos`)).json();
+            return repos;
+        }
+
+        const userName = "jeremiahbrandt";
+        const repoImages = [
+            "https://images.unsplash.com/photo-1517594422361-5eeb8ae275a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+            "https://i.ibb.co/1Lyxhgf/jj-Firewood.png"
+                    ];
+        
+        getGithubData(userName).then(data => {
+            // TODO: Remove
+            // console.log(data);
+
+            document.getElementById("#bio-picture").setAttribute("src", data.avatar_url);
+            document.getElementById("bio-paragraph").innerHTML = data.bio;
+        });
+
+        getPortfolio(userName).then(repos => {
+            // TODO: Remove
+            // console.log(repos);
+
+            const portfolioNode = document.getElementById("portfolio");
+            repos.map((repo, index) => {
+                // Image was not supplied and repo will not be displayed
+                if(repoImages[index] == undefined) {
+                    return;
+                }
+                 const portfolioItemNode = document.createElement("div");
+                 portfolioItemNode.className = "portfolio-item";
+
+                // Title
+                const titleNode = document.createElement("h2");
+                const titleText = document.createTextNode(repo.name);
+                titleNode.appendChild(titleText);
+                portfolioItemNode.append(titleNode);
+
+                const imageNode = document.createElement("img");
+                imageNode.alt = "Repository image";
+                imageNode.src = repoImages[index];
+                portfolioItemNode.append(imageNode);
+
+                // Description
+                const descNode = document.createElement("p");
+                const descText = document.createTextNode(repo.description);
+                descNode.appendChild(descText);
+                portfolioItemNode.append(descNode);
+
+                // Live preview link
+                const previewNode = document.createElement('a');
+                const previewText = document.createTextNode("View Preview");
+                previewNode.appendChild(previewText);
+                previewNode.id = "preview-link";
+                previewNode.title = "View live preview";
+                previewNode.href= repo.homepage;
+                portfolioItemNode.append(previewNode);
+
+
+                // Code link
+                const codeNode = document.createElement('a');
+                const codeText = document.createTextNode("View Code");
+                codeNode.appendChild(codeText);
+                codeNode.id = "code-link";
+                codeNode.title = "View code on GitHub";
+                codeNode.href= repo.html_url;
+                portfolioItemNode.append(codeNode);
+
+                portfolioNode.append(portfolioItemNode);
+            })
+        });
+
+        // Update Copyright date
+        document.getElementById("date").innerHTML = new Date().getFullYear();
+    </script>
+</html>
