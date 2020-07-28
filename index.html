@@ -6,7 +6,7 @@
     }
     :root {
         --background-color: #c1d4f7;
-        --hamburger-size:  30px;
+        --hamburger-size:  100px;
         --hamburger-bg: #571212;
         --nav-links-hover-bg: #ffffff;
         --nav-links-hover-color: #4b2424;
@@ -50,7 +50,7 @@
         height: var(--hamburger-size);
     }
     #hamburger div {
-        height: 5px;
+        height: 17px;
         width: 90%;
         background-color: var(--hamburger-bg);
         border: none;
@@ -140,9 +140,12 @@
     }
     #contact {
         grid-area: contact;
+        justify-self: center;
         display: grid;
-        grid-row-gap: 10px;
+        grid-row-gap: 20px;
         grid-template-areas: 'title' 'name' 'phone' 'email' 'message';
+        width: 100%;
+        max-width: 90vw;
     }
     #contact h1 {
         grid-area: title;
@@ -153,12 +156,18 @@
         display: grid;
         grid-template-columns: auto auto;
     }
+    #contact input, #contact label {
+        font-size: 2.5em;
+        height: 50px;
+        text-align: center;
+    }
     #contact input {
         border: 1px solid var(--form-input-border);
         border-radius: 5px;
     }
     #contact input {
         width: 100%;
+        border-radius: 20px;
     }
     #contact-name {
         grid-area: name;
@@ -172,7 +181,8 @@
     #contact-message {
         grid-area: message;
         border: 1px solid var(--form-input-border);
-        border-radius: 5px;
+        border-radius: 20px;
+        height: 500px;
     }
     footer {
         grid-area: footer;
