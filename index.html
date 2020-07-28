@@ -9,9 +9,11 @@
         --body-bg: #4a5c97;
         --body-color: #dde2dd;
         --hamburger-size:  100px;
-        --hamburger-bg: #571212;
-        --nav-links-hover-bg: #ffffff;
-        --nav-links-hover-color: #4b2424;
+        --hamburger-bg: var(--body-color);
+        --nav-links-bg: var(--body-bg);
+        --nav-links-color: var(--body-color);
+        --nav-links-hover-bg: #07096b;
+        --nav-links-hover-color: var(--body-color);
         --portfolio-view-preview-bg: #3c701e;
         --portfolio-view-preview-color: #d3e0df;
         --portfolio-view-code-bg: #bd0606;
@@ -27,6 +29,7 @@
         grid-template-areas: 'nav' 'main' 'footer';
         grid-row-gap: 20px;
         grid-template-rows: auto auto 100px;
+        justify-items: center;
     }
     nav {
         grid-area: nav;
@@ -43,18 +46,22 @@
     nav:hover #links {
         height: calc(100vh - var(--hamburger-size));
         display: grid;
-        background-color: var(--nav-links-hover-bg);
-        color: var(--nav-links-hover-color);
+        background-color: var(--nav-links-bg);
+        color: var(--nav-links-color);
     }
 
     #hamburger {
         grid-area: hamburger;
         justify-self: right;
+        margin: 0px 20px 0px 0px;
         display: grid;
         align-content: space-around;
         justify-items: center;
         width: var(--hamburger-size);
         height: var(--hamburger-size);
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
     #hamburger div {
         height: 17px;
@@ -64,6 +71,8 @@
         border-radius: 25px;
     }
     nav #links {
+        position: relative;
+        top: calc(40px + var(--hamburger-size));
         grid-area: links;
         height: 0px;
         display: none;
@@ -71,7 +80,7 @@
         justify-content: center;
         justify-items: center;
     }
-    nav #links:hover {
+    nav #links a:hover {
         background-color: var(--nav-links-hover-bg);
         color: var(--nav-links-hover-color);
     }
@@ -80,11 +89,13 @@
         text-align: center;
         align-items: center;
         width: 100vw;
+        font-size: 4em;
     }
     main {
         grid-area: main;
         display: grid;
         grid-template-areas: 'about' 'portfolio' 'contact';
+        max-width: 90%;
     }
     #bio {
         grid-area: about;
@@ -109,12 +120,14 @@
     #portfolio {
         grid-area: portfolio;
         display: grid;
+        grid-row-gap: 30px;
         grid-row: 20px;
         text-align: center;
     }
     .portfolio-item {
         display: grid;
         grid-template-areas: 'title title' 'image image' 'description description' 'preview code';
+        grid-row-gap: 10px;
     }
     .portfolio-item h2 {
         grid-area: title;
@@ -128,14 +141,14 @@
     }
     .portfolio-item a {
         height: 100px;
-        font-size: 2em;
+        font-size: 2.5em;
         display: grid;
         align-items: center;
         justify-items: center;
         justify-self: center;
         border: none;
         border-radius: 20px;
-        width: 250px;
+        width: 300px;
     }
     .portfolio-item #preview-link {
         grid-area: preview;
@@ -153,6 +166,7 @@
         display: grid;
         grid-row-gap: 20px;
         grid-template-areas: 'title' 'name' 'phone' 'email' 'message';
+        grid-template-rows: repeat(4, auto) 500px;
         width: 100%;
         max-width: 90vw;
     }
@@ -167,8 +181,12 @@
     }
     #contact input, #contact label {
         font-size: 2.5em;
-        height: 50px;
+        height: 70px;
         text-align: center;
+    }
+    #contact label {
+        display: grid;
+        align-items: center;
     }
     #contact input {
         border: 1px solid var(--form-input-border);
@@ -189,9 +207,13 @@
     }
     #contact-message {
         grid-area: message;
+    }
+    #contact-message textarea {
         border: 1px solid var(--form-input-border);
         border-radius: 20px;
-        height: 500px;
+        width: 100%;
+        height: calc(100% - 135px);
+        font-size: 2.5em;
     }
     footer {
         display: grid;
@@ -200,6 +222,7 @@
         color: var(--footer-color);
         grid-area: footer;
         text-align: center;
+        width: 100vw;
     }
     h1 {
         font-size: 6em;
@@ -251,7 +274,10 @@
                     <label for="email">Email Address:</label>
                     <input name="email" type="email" />
                 </fieldset>
-                <textarea id="contact-message" name="message" rows="5"></textarea>
+                <fieldset id="contact-message">
+                    <label for="message">Message:</label>
+                    <textarea name="message"></textarea>
+                </fieldset>
             </form>
         </main>
         <footer>
