@@ -148,7 +148,6 @@ main {
 }
 #contact fieldset {
     display: grid;
-    grid-template-rows: auto auto;
     border: none;
 }
 #contact input, #contact label {
@@ -179,12 +178,12 @@ main {
 }
 #contact-message {
     grid-area: message;
+    grid-template-rows: 5em auto;
 }
 #contact-message textarea {
     border: 1px solid var(--form-input-border);
     border-radius: 20px;
     width: 100%;
-    height: calc(100% - 135px);
     font-size: 2.5em;
 }
 footer {
