@@ -49,11 +49,7 @@ nav.shown {
     border-radius: 25px;
 }
 nav #links {
-    top: calc(40px + var(--hamburger-size));
     grid-area: links;
-    height: 0px;
-    display: none;
-    grid-template-rows: repeat(3, auto);
     justify-content: center;
     justify-items: center;
 }
@@ -98,14 +94,24 @@ main {
 #portfolio {
     grid-area: portfolio;
     display: grid;
+    grid-template-areas: 'title' 'items';
     grid-row-gap: 30px;
     text-align: center;
 }
+#portfolio-title {
+    grid-area: title;
+}
+#portfolio-items {
+    grid-area: items;
+    display: grid;
+}
 .portfolio-item {
     display: grid;
+    grid-template-areas: 'title title' 'image image' 'description description' 'preview code';
     grid-row-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    grid-template-rows: 70px 300px 100px 50px;
+    justify-items: center;   
 }
 .portfolio-item h2 {
     grid-area: title;
@@ -202,6 +208,8 @@ h1 {
 }
 h2 {
     font-size: 2.5em;
+    display: grid;
+    align-content: center;
 }
 a {
     text-decoration: none;

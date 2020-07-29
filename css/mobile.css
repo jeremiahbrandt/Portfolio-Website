@@ -10,15 +10,16 @@
 
     nav #links {
         position: relative;
+        grid-template-rows: repeat(3, auto);
+        display: none;
+        height: 0px;
+        top: calc(40px + var(--hamburger-size));
+
     }
     
     #bio {
         grid-row-gap: 10px;
         grid-template-areas: 'aboutTitle' 'aboutImg' 'aboutDesc';
-    }
-
-    .portfolio-item {
-        grid-template-areas: 'title title' 'image image' 'description description' 'preview code';
     }
 
     #contact {

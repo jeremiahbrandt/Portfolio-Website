@@ -31,7 +31,8 @@
                 <p id="bio-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem repellat, ut magnam dolore incidunt voluptatem ipsa eaque doloremque quae odit assumenda velit. Vitae aliquid tenetur debitis rerum, labore ipsum recusandae?</p>
             </section>
             <section id="portfolio">
-                <h1>Portfolio</h1>
+                <h1 id="portfolio-title">Portfolio</h1>
+                <div id="portfolio-items"></div>
             </section>
             <form action="" method="GET" id="contact">
                 <h1>Contact</h1>
@@ -80,11 +81,14 @@
         }
 
         const userName = "jeremiahbrandt";
+        // TOD: Reisize images to be consistent
         const repoImages = [
             "./images/joes-barber-shop.png",
             "./images/jj-firewood.png",
-            "./images/portfolio-website.png",
-            "./images/weather-app.png"
+            "./images/joes-barber-shop.png",
+            "./images/jj-firewood.png",
+            // "./images/portfolio-website.png",
+            // "./images/weather-app.png"
         ];
         
         getGithubData(userName).then(data => {
@@ -99,7 +103,7 @@
             // TODO: Remove
             // console.log(repos);
 
-            const portfolioNode = document.getElementById("portfolio");
+            const portfolioNode = document.getElementById("portfolio-items");
             repos.map((repo, index) => {
                 // Image was not supplied and repo will not be displayed
                 if(repoImages[index] == undefined) {
