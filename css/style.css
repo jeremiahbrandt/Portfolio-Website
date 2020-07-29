@@ -5,10 +5,11 @@
 }
 
 body {
+    display: grid;
+    grid-template-areas: 'nav' 'main' 'footer';
+    justify-items: center;
     background-color: var(--body-bg);
     color: var(--body-color);
-    display: grid;
-    justify-items: center;
 }
 nav {
     display: grid;
@@ -16,11 +17,11 @@ nav {
     width: var(--hamburger-size);
 }
 
-nav:hover {
+nav.shown {
     width: 100%;
 }
 
-nav:hover #links {
+#links.shown {
     display: grid;
     height: calc(100vh - var(--hamburger-size));
     background-color: var(--nav-links-bg);
@@ -48,7 +49,6 @@ nav:hover #links {
     border-radius: 25px;
 }
 nav #links {
-    position: relative;
     top: calc(40px + var(--hamburger-size));
     grid-area: links;
     height: 0px;
@@ -57,7 +57,7 @@ nav #links {
     justify-content: center;
     justify-items: center;
 }
-nav #links a:hover {
+nav.shown {
     background-color: var(--nav-links-hover-bg);
     color: var(--nav-links-hover-color);
 }
@@ -71,6 +71,7 @@ nav #links a {
 main {
     grid-area: main;
     display: grid;
+    grid-template-areas: 'about' 'portfolio' 'contact';
     justify-content: center;
     justify-items: center;
     max-width: 90%;

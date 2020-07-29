@@ -1,6 +1,5 @@
 @media only screen and (orientation: portrait) {
     body {
-        grid-template-areas: 'nav' 'main' 'footer';
         grid-row-gap: 20px;
         grid-template-rows: auto auto 100px;
     }
@@ -9,8 +8,8 @@
         grid-template-areas: 'hamburger' 'links';
     }
 
-    main {
-        grid-template-areas: 'about' 'portfolio' 'contact';
+    nav #links {
+        position: relative;
     }
     
     #bio {

@@ -13,7 +13,7 @@
     </head>
     <body>
         <nav>
-            <div id="hamburger">
+            <div id="hamburger" onclick="toggleNavigation()">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -60,6 +60,15 @@
         </footer>
     </body>
     <script>
+        const toggleNavigation = () => {
+            const links = document.getElementById("links");
+            if(links.classList.contains("shown")) {
+                links.classList.remove("shown");
+            } else {
+                links.classList.add("shown");
+            }
+        }
+
         const getGithubData = async (githubUsername) => {
             const data = await(await fetch(`https://api.github.com/users/${githubUsername}`)).json();
             return data;
