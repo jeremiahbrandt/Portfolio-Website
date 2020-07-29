@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px) and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
     body {
         grid-template-areas: 'nav' 'main' 'footer';
         grid-row-gap: 20px;
