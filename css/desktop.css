@@ -38,3 +38,26 @@ nav #links a {
 h1 {
     font-size: 2em;
 }
+
+#contact {
+    grid-template-rows: repeat(4, auto) 250px;
+}
+
+#contact fieldset {
+    grid-template-areas: 'label input';
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact label {
+    text-align: right;
+    padding-right: 20px;
+}
+
+#contact input, #contact textarea {
+    text-align: left;
+    width: 80%;
+}
+
+#contact textarea {
+    height: 250px;
+}

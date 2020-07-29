@@ -3,27 +3,33 @@
         grid-row-gap: 20px;
         grid-template-rows: auto auto 100px;
     }
+
     nav {
         grid-area: nav;
         grid-template-areas: 'hamburger' 'links';
     }
 
+    nav #hamburger {
+        display: grid;
+        right: 0;
+    }
+
     nav #links {
-        position: relative;
+        position: fixed;
         grid-template-rows: repeat(3, auto);
         display: none;
         height: 0px;
         top: calc(40px + var(--hamburger-size));
 
     }
-    
+
+    nav #links a {
+        display: none;
+    }
+
     #bio {
         grid-row-gap: 10px;
         grid-template-areas: 'aboutTitle' 'aboutImg' 'aboutDesc';
     }
 
-    #contact {
-        grid-template-areas: 'title' 'name' 'phone' 'email' 'message';
-        grid-template-rows: repeat(4, auto) 500px;
-    }
 }

@@ -7,6 +7,8 @@
 body {
     display: grid;
     grid-template-areas: 'nav' 'main' 'footer';
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto 50px;
     justify-items: center;
     background-color: var(--body-bg);
     color: var(--body-color);
@@ -110,7 +112,7 @@ main {
     grid-template-areas: 'title title' 'image image' 'description description' 'preview code';
     grid-row-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px 300px 100px 50px;
+    grid-template-rows: 60px 270px 80px auto;
     justify-items: center;   
 }
 .portfolio-item h2 {
@@ -147,9 +149,12 @@ main {
 #contact {
     grid-area: contact;
     display: grid;
+    grid-template-areas: 'title' 'name' 'phone' 'email' 'message';
+    grid-template-rows: repeat(4, auto) 500px;
     grid-row-gap: 20px;
     width: 100%;
 }
+
 #contact h1 {
     grid-area: title;
 }
@@ -163,16 +168,15 @@ main {
     text-align: center;
 }
 #contact label {
+    grid-area: label;
     display: grid;
     align-items: center;
 }
 #contact input {
+    grid-area: input;
     border: 1px solid var(--form-input-border);
-    border-radius: 5px;
-}
-#contact input {
-    width: 100%;
     border-radius: 20px;
+    width: 100%;
 }
 #contact-name {
     grid-area: name;
@@ -188,6 +192,7 @@ main {
     grid-template-rows: 5em auto;
 }
 #contact-message textarea {
+    grid-area: input;
     border: 1px solid var(--form-input-border);
     border-radius: 20px;
     width: 100%;
