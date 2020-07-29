@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    display: grid;
+    justify-items: center;
+}
+nav {
+    display: grid;
+    justify-self: right;
+    width: var(--hamburger-size);
+}
+
+nav:hover {
+    width: 100%;
+}
+
+nav:hover #links {
+    display: grid;
+    height: calc(100vh - var(--hamburger-size));
+    background-color: var(--nav-links-bg);
+    color: var(--nav-links-color);
+}
+
+#hamburger {
+    grid-area: hamburger;
+    justify-self: right;
+    margin: 0px 20px 0px 0px;
+    display: grid;
+    align-content: space-around;
+    justify-items: center;
+    width: var(--hamburger-size);
+    height: var(--hamburger-size);
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+#hamburger div {
+    height: 17px;
+    width: 90%;
+    background-color: var(--hamburger-bg);
+    border: none;
+    border-radius: 25px;
+}
+nav #links {
+    position: relative;
+    top: calc(40px + var(--hamburger-size));
+    grid-area: links;
+    height: 0px;
+    display: none;
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    justify-items: center;
+}
+nav #links a:hover {
+    background-color: var(--nav-links-hover-bg);
+    color: var(--nav-links-hover-color);
+}
+nav #links a {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    font-size: 4em;
+}
+main {
+    grid-area: main;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    max-width: 90%;
+}
+#bio {
+    grid-area: about;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+#bio h1 {
+    grid-area: aboutTitle;
+}
+#bio img {
+    border-radius: 25px;
+    grid-area: aboutImg;
+    width: 90%;
+}
+#bio p {
+    grid-area: aboutDesc;
+    max-width: 90%;
+    text-indent: 3em;
+}
+#portfolio {
+    grid-area: portfolio;
+    display: grid;
+    grid-row-gap: 30px;
+    text-align: center;
+}
+.portfolio-item {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.portfolio-item h2 {
+    grid-area: title;
+}
+.portfolio-item img {
+    grid-area: image;
+    width: 90%;
+}
+.portfolio-item p {
+    grid-area: description;
+}
+.portfolio-item a {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    border: none;
+    border-radius: 20px;
+    height: 100px;
+    width: 90%;
+    font-size: 2.5em;
+}
+.portfolio-item #preview-link {
+    grid-area: preview;
+    background-color: var(--portfolio-view-preview-bg);
+    color: var(--portfolio-view-preview-color);
+}
+.portfolio-item #code-link {
+    grid-area: code;
+    background-color: var(--portfolio-view-code-bg);
+    color: var(--portfolio-view-code-color);
+}
+#contact {
+    grid-area: contact;
+    display: grid;
+    grid-row-gap: 20px;
+    width: 100%;
+}
+#contact h1 {
+    grid-area: title;
+}
+#contact fieldset {
+    display: grid;
+    grid-template-rows: auto auto;
+    border: none;
+}
+#contact input, #contact label {
+    height: 70px;
+    font-size: 2.5em;
+    text-align: center;
+}
+#contact label {
+    display: grid;
+    align-items: center;
+}
+#contact input {
+    border: 1px solid var(--form-input-border);
+    border-radius: 5px;
+}
+#contact input {
+    width: 100%;
+    border-radius: 20px;
+}
+#contact-name {
+    grid-area: name;
+}
+#contact-phone {
+    grid-area: phone;
+}
+#contact-email {
+    grid-area: email;
+}
+#contact-message {
+    grid-area: message;
+}
+#contact-message textarea {
+    border: 1px solid var(--form-input-border);
+    border-radius: 20px;
+    width: 100%;
+    height: calc(100% - 135px);
+    font-size: 2.5em;
+}
+footer {
+    display: grid;
+    align-items: center;
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
+    grid-area: footer;
+    text-align: center;
+    width: 100vw;
+}
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+h2 {
+    font-size: 2.5em;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}

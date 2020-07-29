@@ -1,0 +1,29 @@
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-areas: 'nav' 'main' 'footer';
+        grid-row-gap: 20px;
+        grid-template-rows: auto auto 100px;
+    }
+    nav {
+        grid-area: nav;
+        grid-template-areas: 'hamburger' 'links';
+    }
+
+    main {
+        grid-template-areas: 'about' 'portfolio' 'contact';
+    }
+    
+    #bio {
+        grid-row-gap: 10px;
+        grid-template-areas: 'aboutTitle' 'aboutImg' 'aboutDesc';
+    }
+
+    .portfolio-item {
+        grid-template-areas: 'title title' 'image image' 'description description' 'preview code';
+    }
+
+    #contact {
+        grid-template-areas: 'title' 'name' 'phone' 'email' 'message';
+        grid-template-rows: repeat(4, auto) 500px;
+    }
+}

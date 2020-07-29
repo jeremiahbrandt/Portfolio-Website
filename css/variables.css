@@ -1,0 +1,17 @@
+:root {
+    --body-bg: #4a5c97;
+    --body-color: #dde2dd;
+    --hamburger-size:  100px;
+    --hamburger-bg: var(--body-color);
+    --nav-links-bg: var(--body-bg);
+    --nav-links-color: var(--body-color);
+    --nav-links-hover-bg: #07096b;
+    --nav-links-hover-color: var(--body-color);
+    --portfolio-view-preview-bg: #3c701e;
+    --portfolio-view-preview-color: #d3e0df;
+    --portfolio-view-code-bg: #bd0606;
+    --portfolio-view-code-color: #d3e0df;
+    --form-input-border: #4d0303;
+    --footer-bg: #0e0518;
+    --footer-color: #d2cfd6;
+}
