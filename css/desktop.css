@@ -1,63 +1,70 @@
-#hamburger {
-    display: none;
-}
+@media only screen and (orientation: landscape) {
 
-nav {
-    width: 100%;
-    height: 50px;
-    justify-content: center;
-}
+    body {
+        grid-template-rows: auto auto 50px;
+    }
 
-nav #links {
-    display: grid;
-    grid-template-areas: 'links';
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    height: 50px;
-    width: 100vw;
-}
+    #hamburger {
+        display: none;
+    }
 
-nav #links a {
-    font-size: 2em;
-    width: 100%;
-}
+    nav {
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+    }
 
-#bio {
-    grid-template-areas: 'aboutTitle aboutTitle' 'aboutImg aboutDesc';
-}
+    nav #links {
+        display: grid;
+        grid-template-areas: 'links';
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        height: 50px;
+        width: 100vw;
+    }
 
-#bio p {
-    display: grid;
-    align-items: center;
-}
+    nav #links a {
+        font-size: 2em;
+        width: 100%;
+    }
 
-#portfolio-items {
-    grid-template-columns: repeat(3, 1fr);
-}
+    #bio {
+        grid-template-areas: 'aboutTitle aboutTitle' 'aboutImg aboutDesc';
+    }
 
-h1 {
-    font-size: 2em;
-}
+    #bio p {
+        display: grid;
+        align-items: center;
+    }
 
-#contact {
-    grid-template-rows: repeat(4, auto) 250px;
-}
+    #portfolio-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-#contact fieldset {
-    grid-template-areas: 'label input';
-    grid-template-columns: 1fr 1fr;
-}
+    h1 {
+        font-size: 2em;
+    }
 
-#contact label {
-    text-align: right;
-    padding-right: 20px;
-}
+    #contact {
+        grid-template-rows: repeat(4, auto) 250px;
+    }
 
-#contact input, #contact textarea {
-    text-align: left;
-    width: 80%;
-}
+    #contact fieldset {
+        grid-template-areas: 'label input';
+        grid-template-columns: 1fr 1fr;
+    }
 
-#contact textarea {
-    height: 250px;
+    #contact label {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    #contact input, #contact textarea {
+        text-align: left;
+        width: 80%;
+    }
+
+    #contact textarea {
+        height: 250px;
+    }
 }
