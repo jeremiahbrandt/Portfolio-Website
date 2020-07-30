@@ -7,6 +7,7 @@
 body {
     display: grid;
     grid-template-areas: 'nav' 'main' 'footer';
+    grid-template-columns: 100%;
     grid-row-gap: 20px;
     justify-items: center;
     background-color: var(--body-bg);
@@ -16,6 +17,7 @@ nav {
     display: grid;
     justify-self: right;
     width: var(--hamburger-size);
+    color: var(--footer-color);
 }
 
 nav.shown {
@@ -27,6 +29,11 @@ nav.shown {
     height: calc(100vh - var(--hamburger-size));
     background-color: var(--nav-links-bg);
     color: var(--nav-links-color);
+}
+
+nav a:hover {
+    background-color: var(--nav-links-hover-bg);
+    color: var(--nav-links-hover-color);
 }
 
 #hamburger {
@@ -116,6 +123,7 @@ main {
 }
 .portfolio-item h2 {
     grid-area: title;
+    width: 100%;
 }
 .portfolio-item img {
     grid-area: image;
@@ -131,7 +139,6 @@ main {
     justify-self: center;
     border: none;
     border-radius: 20px;
-    height: 100px;
     width: 90%;
     font-size: 2.5em;
 }
@@ -140,11 +147,21 @@ main {
     background-color: var(--portfolio-view-preview-bg);
     color: var(--portfolio-view-preview-color);
 }
+
+.portfolio-item #preview-link:hover {
+    background-color: var(--portfolio-view-preview-bg-hover);
+}
+
 .portfolio-item #code-link {
     grid-area: code;
     background-color: var(--portfolio-view-code-bg);
     color: var(--portfolio-view-code-color);
 }
+
+.portfolio-item #code-link:hover {
+    background-color: var(--portfolio-view-code-bg-hover);
+}
+
 #contact {
     grid-area: contact;
     display: grid;
@@ -196,6 +213,8 @@ main {
     border-radius: 20px;
     width: 100%;
     font-size: 2.5em;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 footer {
     display: grid;

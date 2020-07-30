@@ -8,8 +8,10 @@
     --nav-links-hover-bg: #07096b;
     --nav-links-hover-color: var(--body-color);
     --portfolio-view-preview-bg: #3c701e;
+    --portfolio-view-preview-bg-hover: #2c5514;
     --portfolio-view-preview-color: #d3e0df;
     --portfolio-view-code-bg: #bd0606;
+    --portfolio-view-code-bg-hover: #8f0303;
     --portfolio-view-code-color: #d3e0df;
     --form-input-border: #4d0303;
     --footer-bg: #0e0518;
