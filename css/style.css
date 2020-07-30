@@ -225,6 +225,17 @@ footer {
     text-align: center;
     width: 100vw;
 }
+
+#social-media svg {
+    grid-area: socialMedia;
+    height: auto;
+    stroke: var(--body-color);
+}
+
+#copyright {
+    grid-area: copyright;
+}
+
 h1 {
     font-size: 6em;
     text-align: center;

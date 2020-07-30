@@ -48,4 +48,8 @@
         height: calc(100% - 100px);
     }
 
+    footer {
+        grid-template-areas: 'socialMedia' 'copyright';
+    }
+
 }
