@@ -218,6 +218,7 @@ main {
 }
 footer {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     background-color: var(--footer-bg);
     color: var(--footer-color);
@@ -226,10 +227,19 @@ footer {
     width: 100vw;
 }
 
+#social-media {
+    grid-area: socialMedia;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, var(--social-media-size));
+    grid-column-gap: 20px;
+}
+
 #social-media svg {
     grid-area: socialMedia;
-    height: auto;
-    stroke: var(--body-color);
+    width: var(--social-media-size);
+    height: var(--social-media-size);
+    fill: var(--body-color);
 }
 
 #copyright {

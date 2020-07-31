@@ -95,4 +95,8 @@
         font-size: 1em;
         height: 250px;
     }
+
+    footer {
+        grid-template-areas: 'socialMedia copyright';
+    }
 }
