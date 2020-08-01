@@ -50,6 +50,7 @@
 
     footer {
         grid-template-areas: 'socialMedia' 'copyright';
+        grid-template-columns: 1fr;
     }
 
 }

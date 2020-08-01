@@ -37,20 +37,30 @@
             <form action="" method="GET" id="contact">
                 <h1>Contact</h1>
                 <fieldset id="contact-name">
-                    <label for="name">Name:</label>
-                    <input name="tel" type="tel" />
+                    <!-- fieldset { display: grid; } Does not work in Chrome -->
+                    <!-- Wrapper fixes Chrome bug -->
+                    <div class="fieldset-wrapper">
+                        <label for="name">Name:</label>
+                        <input name="tel" type="tel" />
+                    </div>
                 </fieldset>
                 <fieldset id="contact-phone">
-                    <label for="phone">Phone Number:</label>
-                    <input name="text" type="text" required/>
+                    <div class="fieldset-wrapper">
+                        <label for="phone">Phone Number:</label>
+                        <input name="text" type="text" required/>
+                    </div>
                 </fieldset>
-                <fieldset id="contact-email">
-                    <label for="email">Email Address:</label>
-                    <input name="email" type="email" />
-                </fieldset>
+                <div id="contact-email">
+                    <div class="fieldset-wrapper">
+                        <label for="email">Email Address:</label>
+                        <input name="email" type="email" />
+                    </div>
+                </div>
                 <fieldset id="contact-message">
-                    <label for="message">Message:</label>
-                    <textarea name="message"></textarea>
+                    <div class="fieldset-wrapper">
+                        <label for="message">Message:</label>
+                        <textarea name="message"></textarea>
+                    </div>
                 </fieldset>
             </form>
         </main>

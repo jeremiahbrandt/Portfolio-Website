@@ -178,6 +178,11 @@ main {
     display: grid;
     border: none;
 }
+
+#contact .fieldset-wrapper {
+    display: grid;
+}
+
 #contact input, #contact label {
     height: 70px;
     font-size: 2.5em;
@@ -194,19 +199,20 @@ main {
     border-radius: 20px;
     width: 100%;
 }
-#contact-name {
+#contact #name-wrapper {
     grid-area: name;
 }
-#contact-phone {
+#contact #phone-wrapper {
     grid-area: phone;
 }
-#contact-email {
+#contact #email-wrapper {
     grid-area: email;
 }
-#contact-message {
+#contact #message-wrapper {
     grid-area: message;
     grid-template-rows: 5em auto;
 }
+
 #contact-message textarea {
     grid-area: input;
     border: 1px solid var(--form-input-border);
@@ -216,9 +222,9 @@ main {
     padding-top: 10px;
     padding-left: 10px;
 }
+
 footer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     background-color: var(--footer-bg);
     color: var(--footer-color);
