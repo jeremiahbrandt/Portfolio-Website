@@ -45,7 +45,7 @@
     }
 
     #contact textarea {
-        height: var(--contact-textarea-height);
+        height: var(--contact-textarea-height-mobile);
     }
 
     footer {

@@ -165,8 +165,8 @@ main {
 #contact {
     grid-area: contact;
     display: grid;
-    grid-template-areas: 'title' 'name' 'phone' 'email' 'message';
-    grid-template-rows: repeat(4, auto) 500px;
+    grid-template-areas: 'title' 'name' 'phone' 'email' 'message' 'submit';
+    grid-template-rows: repeat(4, auto) 500px 50px;
     grid-row-gap: 20px;
     width: 100%;
 }
@@ -226,6 +226,24 @@ main {
     padding-top: 10px;
     padding-left: 10px;
     width: 100%;
+}
+
+#contact #submitBtn {
+    grid-area: submit;
+    justify-self: right;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.75em;
+    border: none;
+    background-color: var(--contact-submit-bg);
+    color: var(--contact-submit-color);
+    height: 50px;
+    width: 100px;
+}
+
+#contact #submitBtn:hover {
+    background-color: var(--contact-submit-bg-hover);
 }
 
 footer {
