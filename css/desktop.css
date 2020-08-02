@@ -1,7 +1,7 @@
 @media only screen and (orientation: landscape) {
 
     body {
-        grid-template-rows: auto auto 50px;
+        grid-template-rows: auto auto 100px;
     }
 
     #hamburger {
@@ -96,7 +96,11 @@
     }
 
     footer {
-        grid-template-areas: 'socialMedia copyright';
+        grid-template-areas: 'socialMedia directContact' ' copyright copyright';
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #direct-contact a {
         grid-template-columns: repeat(2, 1fr);
     }
 }

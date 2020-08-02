@@ -230,7 +230,7 @@ main {
 
 #contact #submitBtn {
     grid-area: submit;
-    justify-self: right;
+    justify-self: center;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -266,9 +266,32 @@ footer {
 
 #social-media svg {
     grid-area: socialMedia;
+    fill: var(--body-color);
     width: var(--social-media-size);
     height: var(--social-media-size);
-    fill: var(--body-color);
+}
+
+#direct-contact {
+    grid-area: directContact;
+    display: grid;
+}
+
+#direct-contact a {
+    display: grid;
+    grid-column-gap: 10px;
+    justify-content: center;
+}
+
+#direct-contact svg {
+    justify-self: right;
+    stroke: var(--body-color);
+    width: var(--social-media-size);
+    height: var(--social-media-size);
+
+}
+
+#direct-contact p {
+    text-align: left;
 }
 
 #copyright {

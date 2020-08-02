@@ -49,7 +49,15 @@
     }
 
     footer {
-        grid-template-areas: 'socialMedia' 'copyright';
+        grid-template-areas: 'socialMedia' 'directContact' 'copyright';
         grid-template-columns: 1fr;
+    }
+
+    #direct-contact a {
+        grid-template-columns: auto auto;
+    }
+
+    #direct-contact p {
+        text-align: left;
     }
 }
