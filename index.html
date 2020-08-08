@@ -130,24 +130,21 @@
 
         const getPortfolio = async (githubUsername) => {
             const repos = await(await fetch(`https://api.github.com/users/${githubUsername}/repos`)).json();
+            console.log(repos)
             return repos;
         }
 
         const userName = "jeremiahbrandt";
         // TOD: Reisize images to be consistent
         const repoImages = [
-            "./images/joes-barber-shop.png",
+            "./images/Barber-Shop.png",
+            "./images/Downloadable-CSS-Filters.png",
             "./images/jj-firewood.png",
-            "./images/joes-barber-shop.png",
-            "./images/jj-firewood.png",
-            // "./images/portfolio-website.png",
-            // "./images/weather-app.png"
+            "./images/portfolio-website.png",
+            "./images/weather-app.png"
         ];
         
         getGithubData(userName).then(data => {
-            // TODO: Remove
-            // console.log(data);
-
             document.getElementById("#bio-picture").setAttribute("src", data.avatar_url);
             document.getElementById("bio-paragraph").innerHTML = data.bio;
         });
