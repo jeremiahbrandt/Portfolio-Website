@@ -1,7 +1,7 @@
 @media only screen and (orientation: portrait) {
     body {
         grid-row-gap: 20px;
-        grid-template-rows: var(--hamburger-size) auto 100px;
+        grid-template-rows: var(--hamburger-size) auto auto;
     }
 
     nav {
@@ -51,6 +51,7 @@
     footer {
         grid-template-areas: 'socialMedia' 'directContact' 'copyright';
         grid-template-columns: 1fr;
+        grid-row-gap: 20px;
     }
 
     #direct-contact a {

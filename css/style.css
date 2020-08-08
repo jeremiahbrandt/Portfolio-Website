@@ -252,8 +252,10 @@ footer {
     background-color: var(--footer-bg);
     color: var(--footer-color);
     grid-area: footer;
+    padding: 20px 0 20px 0;
     text-align: center;
     width: 100vw;
+    font-size: 1.25em;
 }
 
 #social-media {
@@ -280,6 +282,7 @@ footer {
     display: grid;
     grid-column-gap: 10px;
     justify-content: center;
+    align-items: center;
 }
 
 #direct-contact svg {

@@ -1,7 +1,7 @@
 @media only screen and (orientation: landscape) {
 
     body {
-        grid-template-rows: auto auto 100px;
+        grid-template-rows: auto auto auto;
     }
 
     #hamburger {
